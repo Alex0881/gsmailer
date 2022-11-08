@@ -10,6 +10,7 @@ async function bootstrap() {
   app.use(
     bodyparser.json({
 
+
         limit: '60mb',
     }),
   );
