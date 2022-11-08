@@ -1,0 +1,19 @@
+version: '3.2'
+services:
+  mail-service:
+    container_name: mail-service-container
+    build:
+      context: .
+      dockerfile: 'Dockerfile'
+    restart: always
+    deploy:
+      resources:
+        limits:
+          cpus: '1'
+          memory: 1G
+    ports:
+      - ${PORT}:${PORT}
+    environment:
+      - PORT=${PORT}
+    volumes:
+      - /var/log/dockerLogs:/app/logs
