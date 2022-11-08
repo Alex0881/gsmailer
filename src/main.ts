@@ -11,6 +11,7 @@ async function bootstrap() {
     bodyparser.json({
 
 
+
         limit: '60mb',
     }),
   );
