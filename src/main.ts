@@ -8,7 +8,10 @@ import * as bodyparser from 'body-parser';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.use(
-    bodyparser.json({ limit: '60mb' })
+    bodyparser.json({
+
+        limit: '60mb',
+    }),
   );
   // app.useLogger(app.get(Logger)); выводит информацию о старте приложения
   app.enableVersioning({
