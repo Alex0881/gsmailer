@@ -4,8 +4,7 @@ import { VersioningType } from '@nestjs/common';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 import { ConfigService } from '@nestjs/config';
 import * as bodyparser from 'body-parser';
-//
-//
+
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.use(
